@@ -1,11 +1,10 @@
-import Image from "next/image"
+import Script from "next/script"
 import { Linkedin, ArrowRight, Zap, Brain, Workflow, Sparkles } from "lucide-react"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import LogoStrip from "@/components/LogoStrip"
 import InfoCard from "@/components/InfoCard"
 import FitFilter from "@/components/FitFilter"
-import ContactForm from "@/components/ContactForm"
 
 const helpCards = [
   {
@@ -59,17 +58,7 @@ export default function Page() {
         <section className="hero-glow relative px-6 pb-20 pt-24 md:px-10 md:pb-28 md:pt-32">
           <div className="relative z-10 mx-auto max-w-6xl">
             <div className="flex flex-col items-center justify-center text-center">
-              <div className="animate-fade-in mb-1 flex justify-center">
-                <Image
-                  src="/images/mula-logo.png"
-                  alt="Mula"
-                  width={400}
-                  height={400}
-                  className="h-32 w-auto md:h-40 lg:h-44"
-                  priority
-                />
-              </div>
-              <h1 className="animate-fade-in-delay-1 m-0 max-w-4xl text-5xl font-bold tracking-tight leading-[1.08] text-[var(--text)] md:text-7xl lg:text-8xl text-balance">
+              <h1 className="animate-fade-in m-0 max-w-5xl text-6xl font-bold tracking-tight leading-[1.05] text-[var(--text)] sm:text-7xl md:text-8xl lg:text-9xl text-balance">
                 {"AI that "}
                 <span className="relative inline-block">
                   <span className="relative z-10 text-[var(--accent)]">survives</span>
@@ -77,12 +66,12 @@ export default function Page() {
                 </span>
                 {" production."}
               </h1>
-              <p className="animate-fade-in-delay-2 mt-8 max-w-2xl text-lg leading-relaxed text-[var(--muted)] md:text-xl">
+              <p className="animate-fade-in-delay-1 mt-10 max-w-2xl text-lg leading-relaxed text-[var(--muted)] md:text-xl">
                 We help product and operations teams identify high-leverage workflows, then design
                 and deploy agentic systems that reduce manual work and decision overhead in real
                 environments.
               </p>
-              <div className="animate-fade-in-delay-3 mt-12 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">
+              <div className="animate-fade-in-delay-2 mt-12 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">
                 <a
                   href="#contact"
                   className="animate-pulse-glow group inline-flex items-center justify-center gap-2.5 rounded-xl bg-[var(--accent)] px-7 py-4 text-sm font-semibold text-[#0A0A0B] transition-all hover:bg-[var(--accentHover)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg)]"
@@ -180,7 +169,7 @@ export default function Page() {
               </p>
               <div className="mt-5 flex flex-wrap items-center gap-3">
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/prithviseshadri/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-lg border border-[var(--border-custom)] bg-[var(--bg)] px-3 py-2 text-sm font-medium text-[var(--accent)] transition-all hover:border-[color:rgba(245,158,11,0.3)]"
@@ -189,7 +178,7 @@ export default function Page() {
                   Prithvi
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/vamsikrishnank/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-lg border border-[var(--border-custom)] bg-[var(--bg)] px-3 py-2 text-sm font-medium text-[var(--accent)] transition-all hover:border-[color:rgba(245,158,11,0.3)]"
@@ -233,7 +222,15 @@ export default function Page() {
             <p className="mb-8 text-sm leading-relaxed text-[var(--muted)]">
               {"Share what breaks and what \u201Cbetter\u201D looks like. We respond within 24 hours."}
             </p>
-            <ContactForm />
+            <div
+              className="calendly-inline-widget"
+              data-url="https://calendly.com/d/cxkp-mkv-8dv/discovery-call?background_color=0a0a0b&text_color=fafafa&primary_color=f59e0b"
+              style={{ minWidth: "320px", height: "700px" }}
+            />
+            <Script
+              src="https://assets.calendly.com/assets/external/widget.js"
+              strategy="lazyOnload"
+            />
             <p className="mt-5 text-center text-xs text-[var(--muted)]">
               {"Or email directly: "}
               <a href="mailto:ps27@seas.upenn.edu" className="text-[var(--accent)] transition-colors hover:text-[var(--text)]">ps27@seas.upenn.edu</a>

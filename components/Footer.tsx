@@ -1,4 +1,4 @@
-import { Linkedin, Mail } from "lucide-react"
+import { Mail } from "lucide-react"
 import Image from "next/image"
 
 const footerNav = [
@@ -36,16 +36,7 @@ export default function Footer() {
             </nav>
             <div className="flex items-center gap-3">
               <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[var(--border-custom)] text-[var(--muted)] transition-all hover:border-[color:rgba(245,158,11,0.3)] hover:text-[var(--accent)]"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="h-4 w-4" />
-              </a>
-              <a
-                href="mailto:ps27@seas.upenn.edu"
+                href="mailto:ps27@seas.upenn.edu,nkvk@seas.upenn.edu"
                 className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[var(--border-custom)] text-[var(--muted)] transition-all hover:border-[color:rgba(245,158,11,0.3)] hover:text-[var(--accent)]"
                 aria-label="Email"
               >
