@@ -66,7 +66,7 @@ export default function Page() {
                 </span>
                 {" production."}
               </h1>
-              <p className="animate-fade-in-delay-1 mt-10 max-w-2xl text-lg leading-relaxed text-[var(--muted)] md:text-xl">
+              <p className="animate-fade-in-delay-1 mt-8 max-w-3xl text-lg leading-relaxed text-[var(--muted)] md:text-xl">
                 We help product and operations teams identify high-leverage workflows, then design
                 and deploy agentic systems that reduce manual work and decision overhead in real
                 environments.
@@ -94,7 +94,7 @@ export default function Page() {
         </section>
 
         {/* ─── What We Help With ─── */}
-        <section className="border-t border-[var(--border-custom)] px-6 py-16 md:px-10 md:py-24">
+        <section className="section-glow border-t border-[var(--border-custom)] px-6 py-16 md:px-10 md:py-24">
           <div className="mx-auto max-w-6xl">
             <p className="mb-2 text-xs font-medium uppercase tracking-widest text-[var(--accent)]">Capabilities</p>
             <h2 className="mb-10 text-2xl font-bold tracking-tight text-[var(--text)] md:mb-12 md:text-4xl">
@@ -118,7 +118,7 @@ export default function Page() {
 
             <div className="grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-[var(--border-custom)] bg-[var(--border-custom)] md:grid-cols-3">
               {steps.map((step) => (
-                <div key={step.number} className="flex flex-col bg-[var(--surface)] p-6">
+                <div key={step.number} className="flex flex-col bg-[var(--surface)] p-6 transition-colors hover:bg-[color:rgba(24,24,27,0.95)]">
                   <span className="mb-3 text-xs font-bold tracking-wider text-[var(--accent)]">{step.number}</span>
                   <h3 className="mb-1.5 text-base font-semibold text-[var(--text)]">{step.title}</h3>
                   <p className="text-sm leading-relaxed text-[var(--muted)]">{step.body}</p>
@@ -134,7 +134,7 @@ export default function Page() {
         </section>
 
         {/* ─── Point of View ─── */}
-        <section className="border-t border-[var(--border-custom)] px-6 py-16 md:px-10 md:py-24">
+        <section className="section-glow border-t border-[var(--border-custom)] px-6 py-16 md:px-10 md:py-24">
           <div className="mx-auto max-w-6xl">
             <p className="mb-2 text-xs font-medium uppercase tracking-widest text-[var(--accent)]">Philosophy</p>
             <h2 className="mb-10 text-2xl font-bold tracking-tight text-[var(--text)] md:mb-12 md:text-4xl">
@@ -143,7 +143,7 @@ export default function Page() {
 
             <div className="grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-[var(--border-custom)] bg-[var(--border-custom)] md:grid-cols-3">
               {povStatements.map((statement, i) => (
-                <div key={i} className="flex gap-4 bg-[var(--surface)] p-6">
+                <div key={i} className="flex gap-4 bg-[var(--surface)] p-6 transition-colors hover:bg-[color:rgba(24,24,27,0.95)]">
                   <span className="shrink-0 text-sm font-bold text-[var(--accent)] opacity-40">
                     {String(i + 1).padStart(2, "0")}
                   </span>
@@ -161,7 +161,7 @@ export default function Page() {
             <h2 className="mb-10 text-2xl font-bold tracking-tight text-[var(--text)] md:mb-12 md:text-4xl">
               Founders
             </h2>
-            <div className="rounded-2xl border border-[var(--border-custom)] bg-[var(--surface)] p-6 md:p-8">
+            <div className="gradient-border rounded-2xl border border-[var(--border-custom)] bg-[var(--surface)] p-6 md:p-8">
               <p className="text-base leading-relaxed text-[var(--text-secondary)]">
                 Prithvi Seshadri and Vamsi Krishna are UPenn-trained in data science and systems
                 engineering, with upcoming work across Google (YouTube Trust & Safety) and Amazon
@@ -202,7 +202,7 @@ export default function Page() {
         </section>
 
         {/* ─── Fit Filter ─── */}
-        <section className="border-t border-[var(--border-custom)] px-6 py-16 md:px-10 md:py-24">
+        <section className="section-glow border-t border-[var(--border-custom)] px-6 py-16 md:px-10 md:py-24">
           <div className="mx-auto max-w-6xl">
             <p className="mb-2 text-xs font-medium uppercase tracking-widest text-[var(--accent)]">Alignment</p>
             <h2 className="mb-10 text-2xl font-bold tracking-tight text-[var(--text)] md:mb-12 md:text-4xl">
@@ -222,11 +222,13 @@ export default function Page() {
             <p className="mb-8 text-sm leading-relaxed text-[var(--muted)]">
               {"Share what breaks and what \u201Cbetter\u201D looks like. We respond within 24 hours."}
             </p>
-            <div
-              className="calendly-inline-widget"
-              data-url="https://calendly.com/d/cxkp-mkv-8dv/discovery-call?background_color=0a0a0b&text_color=fafafa&primary_color=f59e0b"
-              style={{ minWidth: "320px", height: "700px" }}
-            />
+            <div className="gradient-border overflow-hidden rounded-2xl border border-[var(--border-custom)] bg-[var(--surface)] p-2">
+              <div
+                className="calendly-inline-widget"
+                data-url="https://calendly.com/d/cxkp-mkv-8dv/discovery-call?background_color=0a0a0b&text_color=fafafa&primary_color=f59e0b"
+                style={{ minWidth: "320px", height: "700px" }}
+              />
+            </div>
             <Script
               src="https://assets.calendly.com/assets/external/widget.js"
               strategy="lazyOnload"
